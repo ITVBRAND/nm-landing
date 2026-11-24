@@ -16,17 +16,19 @@
     padding: 20px;
     border: 1.4px solid var(--clr-border-strong);
     border-radius: 4px;
-    transition: border-color 0.2s ease;
+    transition: .3s ease-in-out;
 }
 
 .directions__card:hover {
-    border-color: var(--clr-text);
+    background-color: var(--clr-mark);
+    border: 1.4px solid #00000000;
 }
 
 .directions__plus {
     width: 21px;
     height: 21px;
     color: var(--clr-text);
+    transition: .3s ease-in-out;
 }
 
 .directions__name {
@@ -36,6 +38,7 @@
     line-height: var(--lh-brand);
     letter-spacing: -0.2px;
     text-transform: uppercase;
+    transition: .3s ease-in-out;
 }
 
 .directions__text {
@@ -44,6 +47,19 @@
     line-height: 18px;
     letter-spacing: 0.1px;
     color: var(--clr-text-secondary);
+    transition: .3s ease-in-out;
+}
+
+.directions__card:hover .directions__plus {
+    color: var(--clr-white);
+}
+
+.directions__card:hover .directions__name {
+    color: var(--clr-white);
+}
+
+.directions__card:hover .directions__text {
+    color: var(--clr-white);
 }
 
 @media screen and (max-width: 1100px) {
