@@ -1,0 +1,127 @@
+.products__head,
+.block-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 48px;
+}
+
+.products__title,
+.block-head__title {
+    max-width: 487px;
+}
+
+.products__list {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.products__row {
+    display: grid;
+    grid-template-columns: minmax(280px, 447px) minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.products__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 12px;
+}
+
+.products__brand {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--clr-red);
+}
+
+.products__name {
+    max-width: 404px;
+    font-weight: 600;
+    font-size: var(--fs-product);
+    line-height: var(--lh-product);
+    letter-spacing: var(--ls-product);
+    text-transform: uppercase;
+}
+
+.products__text {
+    max-width: 390px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: var(--clr-text-muted);
+}
+
+.products__tags {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.products__tag {
+    display: flex;
+    gap: 20px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--clr-text-muted);
+}
+
+.products__tag-mark {
+    letter-spacing: 0.25px;
+}
+
+.products__media {
+    height: 650px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.products__more {
+    width: min(100%, 330px);
+    margin: 72px auto 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .products__head,
+    .block-head {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .products__row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .products__list {
+        gap: 56px;
+    }
+
+    .products__media {
+        height: 360px;
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .products__media {
+        height: 240px;
+    }
+
+    .products__more,
+    .products__copy .btn {
+        width: 100%;
+    }
+}

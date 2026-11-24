@@ -1,0 +1,228 @@
+.hero {
+    position: relative;
+    background: var(--clr-bg);
+}
+
+.hero__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 26px 40px 36px;
+}
+
+.hero__watermark {
+    width: 100%;
+    font-weight: 500;
+    font-size: clamp(42px, 8.6vw, 118px);
+    line-height: 0.82;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+    color: #ececec;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.hero__layout {
+    display: grid;
+    grid-template-columns: 340fr 640fr 340fr;
+    min-height: 560px;
+    margin: 0 var(--rail);
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+    position: relative;
+}
+
+.hero__main,
+.hero__mark,
+.hero__aside {
+    min-width: 0;
+    position: relative;
+}
+
+.hero__main {
+    padding: 32px 28px 36px 32px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--clr-border);
+}
+
+.hero__title {
+    font-weight: 500;
+    font-size: var(--fs-hero);
+    line-height: var(--lh-hero);
+    letter-spacing: var(--ls-hero);
+    text-transform: uppercase;
+    width: min(637px, calc(100vw - 180px));
+    max-width: none;
+}
+
+.hero__lead {
+    margin-top: 22px;
+    max-width: 270px;
+    color: var(--clr-text-secondary);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+}
+
+.hero__actions {
+    margin-top: auto;
+    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.hero__mark {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-right: 1px solid var(--clr-border);
+}
+
+.hero__mark-grid {
+    position: absolute;
+    inset: 8% 6%;
+    background-size: 88px 72px;
+    background-position: center;
+    mask-image: radial-gradient(circle at center, #000 42%, transparent 72%);
+}
+
+.hero__mark-logo {
+    /* width: min(280px, 70%); */
+    width: 70%;
+    height: auto;
+    /* opacity: 0.18; */
+    position: relative;
+    /* z-index: 1; */
+}
+
+.hero__aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px 28px;
+    text-align: center;
+}
+
+.hero__points {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 221px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero__point-index {
+    display: block;
+    margin-bottom: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--clr-red);
+}
+
+.hero__point-text {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: var(--clr-text-secondary);
+}
+
+.hero__media {
+    margin-top: auto;
+    width: 100%;
+    max-width: 282px;
+    height: 163px;
+    align-self: flex-end;
+}
+
+.hero__preview-pic {
+    background: no-repeat url(../images/preview_video.webp) center / cover;
+}
+
+.hero__play {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 37px;
+    height: 37px;
+    border-radius: 4px;
+    background: var(--clr-red);
+    display: grid;
+    place-items: center;
+    z-index: 2;
+}
+
+.hero__play svg {
+    margin-left: 2px;
+}
+
+@media screen and (max-width: 1100px) {
+    .hero__layout {
+        grid-template-columns: 1fr;
+        margin: 0;
+        min-height: 0;
+    }
+
+    .hero__main,
+    .hero__mark,
+    .hero__aside {
+        border-right: 0;
+    }
+
+    .hero__main {
+        padding: 32px 24px;
+    }
+
+    .hero__title {
+        width: auto;
+    }
+
+    .hero__lead {
+        max-width: 460px;
+    }
+
+    .hero__mark {
+        min-height: 220px;
+        border-top: 1px solid var(--clr-border);
+        border-bottom: 1px solid var(--clr-border);
+    }
+
+    .hero__aside {
+        align-items: stretch;
+        text-align: left;
+        padding: 32px 24px 40px;
+    }
+
+    .hero__points {
+        max-width: none;
+        gap: 20px;
+    }
+
+    .hero__media {
+        align-self: stretch;
+        max-width: none;
+        margin-top: 28px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .hero__top {
+        height: 64px;
+        padding: 0 16px 6px;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Medeo Sans";
+    src: url("../fonts/MedeoSansVariable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Medeo Sans";
+    src: url("../fonts/MedeoSansVariable-Italic.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    --font-sans: "Medeo Sans", "Segoe UI", sans-serif;
+    --font-mono: "Medeo Mono", "IBM Plex Mono", ui-monospace, monospace;
+
+    --fs-hero: 46px;
+    --lh-hero: 56px;
+    --ls-hero: -1.15px;
+
+    --fs-section: 34px;
+    --lh-section: 42px;
+    --ls-section: -0.8px;
+
+    --fs-product: 20px;
+    --lh-product: 25px;
+    --ls-product: -0.35px;
+
+    --fs-card: 20px;
+    --lh-card: 26px;
+    --ls-card: -0.25px;
+
+    --fs-footer-nav: 30px;
+    --lh-footer-nav: 35px;
+
+    --fs-body: 13px;
+    --lh-body: 20px;
+
+    --fs-compact: 12px;
+    --lh-compact: 18px;
+
+    --fs-label: 11px;
+    --lh-label: 16px;
+
+    --fs-nav: 12px;
+    --lh-nav: 16px;
+
+    --fs-button: 12px;
+    --lh-button: 17px;
+
+    --fs-brand: 17px;
+    --lh-brand: 23px;
+
+    --fs-contact: 16px;
+    --lh-contact: 24px;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    letter-spacing: 0.05px;
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --fs-hero: 32px;
+        --lh-hero: 38px;
+        --ls-hero: -0.6px;
+        --fs-section: 26px;
+        --lh-section: 32px;
+        --ls-section: -0.5px;
+        --fs-footer-nav: 24px;
+        --lh-footer-nav: 30px;
+        --fs-card: 18px;
+        --lh-card: 24px;
+    }
+}
