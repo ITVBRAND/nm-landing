@@ -1,6 +1,5 @@
-const form = document.querySelector(".request__form");
+document.querySelectorAll(".request__form").forEach((form) => {
 
-if (form) {
     const selectButton = form.querySelector(".request__select");
     const selectText = form.querySelector(".request__select-text");
     const options = form.querySelector(".request__options");
@@ -38,7 +37,7 @@ if (form) {
     });
 
     document.addEventListener("click", (event) => {
-        if (!event.target.closest(".request__field--select")) {
+        if (!form.contains(event.target) || !event.target.closest(".request__field--select")) {
             closeOptions();
         }
     });
@@ -74,4 +73,4 @@ if (form) {
         });
         closeOptions();
     });
-}
+});

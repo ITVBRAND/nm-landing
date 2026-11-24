@@ -23,6 +23,46 @@
     grid-template-columns: minmax(280px, 447px) minmax(0, 1fr);
     gap: 20px;
     align-items: start;
+    position: relative;
+}
+
+/* Keep each desktop panel in view while the next one scrolls over it. */
+@media screen and (min-width: 1101px) and (prefers-reduced-motion: no-preference) {
+    .products__row {
+        position: sticky;
+        top: calc(var(--header-h) + 24px);
+        background: var(--clr-bg);
+    }
+
+    .products__row:nth-child(1) {
+        z-index: 1;
+        top: calc(var(--header-h) + 24px);
+    }
+
+    .products__row:nth-child(2) {
+        z-index: 2;
+        top: calc(var(--header-h) + 42px);
+    }
+
+    .products__row:nth-child(3) {
+        z-index: 3;
+        top: calc(var(--header-h) + 60px);
+    }
+
+    .products__row:nth-child(4) {
+        z-index: 4;
+        top: calc(var(--header-h) + 78px);
+    }
+
+    .products__row:nth-child(5) {
+        z-index: 5;
+        top: calc(var(--header-h) + 96px);
+    }
+
+    html.has-gsap-smoother .products__row {
+        position: relative;
+        top: auto;
+    }
 }
 
 .products__copy {

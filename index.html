@@ -21,9 +21,12 @@
     <link rel="stylesheet" href="assets/styles/journal.css">
     <link rel="stylesheet" href="assets/styles/request.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
+    <link rel="stylesheet" href="assets/styles/animation.css">
+    <link rel="stylesheet" href="assets/styles/modalForm.css">
 </head>
 <body>
-    <div class="page">
+    <div id="smooth-wrapper">
+    <div class="page" id="smooth-content">
         <header class="header">
             <a href="#top" class="header__logo">
                 <img src="assets/images/logo.svg" class="header__logo-img" alt="NM Engineering">
@@ -755,9 +758,15 @@
             </div>
         </footer>
     </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
     <script src="assets/scripts/header.js"></script>
     <script src="assets/scripts/hero.js"></script>
+    <script src="assets/scripts/modalForm.js"></script>
     <script src="assets/scripts/form.js"></script>
+    <script src="assets/scripts/animation.js"></script>
 </body>
 </html>
